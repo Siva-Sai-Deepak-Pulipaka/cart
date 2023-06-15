@@ -2,3 +2,11 @@ component: cart
 params: "REDIS_HOST:prod.elasticache.endpoint,CATALOGUE_HOST:catalogue,CATALOGUE_PORT:8080"  #we can just mention service because it is intercommunication for kubernetes so no need to go to param store to fetch the values
 
 # params: "REDIS_HOST:prod.elasticache.endpoint,CATALOGUE_HOST:prod.cart.catalogue_host,CATALOGUE_PORT:prod.cart.catalogue_port"
+
+resources:
+   limits:
+     cpu: 300m
+     memory: 350Mi
+   requests:
+     cpu: 200m
+     memory: 256Mi
